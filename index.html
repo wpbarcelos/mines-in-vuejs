@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app"  >
+      <h1 v-if="gameover" class="title">
+          GAME OVER  ;(
+          <br />
+          <a href="">Restart</a>
+      </h1>
+      
+      <h2 v-if="winGame" class="title">Você ganhou :)
+
+          <br />
+          <a href="">Restart</a>
+
+      </h2>
+      <div style="display:block; margin:0 auto ; max-width:880px">
+        <h2> 
+            <span style="width:200px; display:inline-block">Tempo: {{ time/100 }}</span>
+            <span>&#128681 {{ flags }}</span>
+        </h2>
+        <div  class="area">
+          <div v-for="(linha, idxLinha ) of map" class="row">
+            <div
+              class="box"
+              v-for="(coluna, idxColuna) of linha"
+              @click="markArea(idxLinha, idxColuna)"
+              @contextmenu.prevent="markFlag(idxLinha, idxColuna)"
+              :class="{'opened': coluna.opened }"
+              :disabled="gameover"
+            >
+              <span v-if="coluna.flag">
+                &#128681
+              </span>
+
+              <span class="bomb" v-if="gameover && coluna.opened && coluna.bomb ">
+               *
+              </span>
+
+              <span v-if="!coluna.bomb">{{ coluna.bombsAround }}</span>
+              
+              
+              <!-- {{ gameover &&  coluna.bomb ? '*' : coluna.bombsAround }} -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <p v-for="line of log">{{ line }}</p>
+      <hr />
+      {{ map.length }}
+      <hr /> -->
+    </div>
+
+   
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
