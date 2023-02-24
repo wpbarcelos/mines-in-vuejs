@@ -22,3 +22,5 @@ Thanks :)
 ### Why ?
 
 This is good exercise, do things no mather what :|
+
+<a href="https://famous-figolla-79cc43.netlify.app"> Play Now! </a>
