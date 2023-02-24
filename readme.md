@@ -23,4 +23,16 @@ Thanks :)
 
 This is good exercise, do things no mather what :|
 
+
+
 <a href="https://famous-figolla-79cc43.netlify.app" target="_blank"> Play Now! ,  https://famous-figolla-79cc43.netlify.app/ </a> 
+
+____
+
+
+
+### Contact
+
+Email: wpbarcelos@gmail.com
+
+Linkedin: https://www.linkedin.com/in/wanderson-passos-barcelos-ab196872/
